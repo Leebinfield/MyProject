@@ -1,0 +1,119 @@
+Index: src/main/java/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/Main.java	(revision b8cb1f08c5131d6143b7006d58ca3050eb2dcce6)
++++ src/main/java/Main.java	(date 1560504445591)
+@@ -1,8 +1,95 @@
++import org.sqlite.SQLiteConfig;
++
++import java.sql.*;
++import java.util.Scanner;
++
+ public class Main {
++    public static Connection db = null;
++
+     public static void main(String[] args) {
+-        System.out.println("Welcome");
++        openDatabase("Database.db");
++        Add();
++        Delete();
++        Select();
++        closeDatabase();
++    }
++
++    private static void openDatabase(String dbFile) {
++        try  {
++            Class.forName("org.sqlite.JDBC");
++            SQLiteConfig config = new SQLiteConfig();
++            config.enforceForeignKeys(true);
++            db = DriverManager.getConnection("jdbc:sqlite:resources/" + dbFile, config.toProperties());
++            System.out.println("Database connection successfully established.");
++        } catch (Exception exception) {
++            System.out.println("Database connection error: " + exception.getMessage());
++        }
+ 
++    }
+ 
++    private static void closeDatabase(){
++        try {
++            db.close();
++            System.out.println("Disconnected from database.");
++        } catch (Exception exception) {
++            System.out.println("Database disconnection error: " + exception.getMessage());
++        }
++    }
++    public static void Select(){
++        try{
++            PreparedStatement ps = db.prepareStatement("Select AccName, FavFood from AccountName");
++            ResultSet results = ps.executeQuery();
++            while (results.next()){
++                String AccName = results.getString(1);
++                String Food = results.getString(2);
++                System.out.println("Username: " + AccName +" Favourite Food: " + Food);
++            }
++        }catch (Exception exception){
++            System.out.println("Database error: " + exception.getMessage());
+         }
+     }
++    public static void Add(){
++        try{
++            Scanner scanner = new Scanner(System.in);
++            String name = scanner.nextLine();
++            String fave = scanner.nextLine();
++            PreparedStatement ps = db.prepareStatement("INSERT INTO AccountName(AccName,FavFood)VALUES (?,?)");
++            ps.setString(1, name);
++            ps.setString(2, fave);
++            ps.executeUpdate();
++        } catch (Exception exception) {
++            System.out.println("Database error: " + exception.getMessage());
++        }
++    }
++    private static void Delete(){
++        try{
++            Scanner scanner = new Scanner(System.in);
++            System.out.println("What account name do you want to delte?:-");
++            String x = scanner.nextLine();
++            PreparedStatement ps = db.prepareStatement("DELETE FROM AccountName WHERE main.AccountName.FavFood= ?");
++            ps.setString(1, x);
++            ps.executeUpdate();
++        }catch (Exception exception){
++            System.out.println("Database error: "+ exception.getMessage());
++        }
++    }
++    private static void Update(){
++        try{
++            Scanner scanner = new Scanner(System.in);
++            System.out.println("Enter new name:");
++            String newName = scanner.nextLine();
++            System.out.println("enter new food:");
++            String newfood = scanner.nextLine();
++            System.out.println("Enter target name:");
++            String target = scanner.nextLine();
++            PreparedStatement ps = db.prepareStatement("UPDATE main.AccountName SET main.AccountName.AccName = ?, main.AccountName.FavFood = ? WHERE main.AccountName.AccName=?");
++            ps.setString(1, newName);
++            ps.setString(2,newfood);
++            ps.setString(3, target);
+ 
++        }catch(Exception exception){
++            System.out.println("Database error: "+ exception.getMessage());
++        }
++    }
++
++}
+diff --git resources/Database.db resources/Database.db
+index 9afcb33bf896e2e89e5ddefff94512b90b94611e..2382b386043137defde109c28c8b20e9851f69ad
+GIT binary patch
+literal 5120
+zc%1E*%TC)s6ozMf?1WSbU3lRIsx%^-M2ZjyRh1eQkwy+gNmH7nDy*!*9ulj*Kr)G7
+znP=chcm*ULfEC+bR^7p}QWuO}5Mg1ZD2ue!eAe;IKR3<s<s7^Hq2Y2y4#K`qIax<4
+z!WeB5f)L6G)9y?WmKLU>2QZpW2Cb~V&MM!LqU<7N7cQdX59Ue!amEW;+Q{Yb_!Fo5
+z9xK~+I1G4``jb_q(lW~(lXS{&8z!0PAbBC;O1smlHMhu4tM;zk+9P#yk2K$RNb_T(
+zQ6yD5s)nIcB$aKmQYU$j1zp~|pIaasZ^(L~0Kd>TTEfT;9Ckc7^2GCQ(IF3GZT)T-
+z@S)>|7H9sU6>r#DOX$$Va;HYAgvYO9oiHq+S$*X3a>A(Pr}<xanMxV8T#|<q*VS5^
+z5Fl=oniVGv&JbL~7r2CTQI$v}e=E;5FqYb!jaa4U+MijFRY6}0J$HZD@3Q_N3qtbH
+z_vnCj1G=by{=%UF4NiE^4Z4e1Xpb@1W_F)Z{~3zj|0@Jna05T#EBu(ZgA$2kMlxXF
+zI7nz|(6NXPYE+7_08uI8fsz6}BjP}m|D&(^`}{xejY}kwr!ZUozgr~wmse%>mq`9I
+HrsV%yT$$lZ
+
