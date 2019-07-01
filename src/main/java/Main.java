@@ -7,7 +7,7 @@ public class Main {
     public static Connection db = null;
 
     public static void main(String[] args) {
-        openDatabase("Database.db");
+        openDatabase("ProjectDB.db");
         Add();
         Delete();
         Select();
