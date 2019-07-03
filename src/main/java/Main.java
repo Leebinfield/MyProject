@@ -8,6 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
         openDatabase("ProjectDB.db");
+        Restaurants.listRestaurants();
+        Restaurants.insertRest(2, "gu183ry" , 123);
         Add();
         Delete();
         Select();
