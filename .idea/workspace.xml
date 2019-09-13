@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Accounts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Area.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/65f1e2d1-4e57-4694-a238-c3c48c6a6dda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/65f1e2d1-4e57-4694-a238-c3c48c6a6dda.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/75eef0e8-19b4-4ed7-8954-24df852e4365.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/75eef0e8-19b4-4ed7-8954-24df852e4365.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/yourDatabaseNameHere.db" beforeDir="false" />
-    </list>
+    <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="finally pushed back lol added classes and some code" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +144,7 @@
       <workItem from="1561983925583" duration="1740000" />
       <workItem from="1561985781131" duration="1845000" />
       <workItem from="1562149196129" duration="2780000" />
-      <workItem from="1568377037308" duration="2838000" />
+      <workItem from="1568377037308" duration="3112000" />
     </task>
     <task id="LOCAL-00001" summary="Added update add select and delete">
       <created>1560504636725</created>
@@ -192,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1561987609623</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="finally pushed back lol added classes and some code">
+      <created>1568380212531</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568380212531</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +209,7 @@
     <MESSAGE value="Added update add select and delete" />
     <MESSAGE value="updated db stuff" />
     <MESSAGE value="Did some methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Did some methods" />
+    <MESSAGE value="finally pushed back lol added classes and some code" />
+    <option name="LAST_COMMIT_MESSAGE" value="finally pushed back lol added classes and some code" />
   </component>
 </project>
