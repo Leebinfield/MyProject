@@ -1,5 +1,4 @@
 import org.sqlite.SQLiteConfig;
-
 import java.sql.*;
 import java.util.Scanner;
 
@@ -10,12 +9,13 @@ public class Main {
         openDatabase("ProjectDB.db");
         Restaurants.listRestaurants();
         Restaurants.insertRest(2, "gu183ry" , 123);
-        Add();
-        Delete();
-        Select();
+        Add();     //CREATE
+        Select();  //READ
+        Update();  //UPDATE
+        Delete();  //DESTROY
         closeDatabase();
-    }
 
+    }
     private static void openDatabase(String dbFile) {
         try  {
             Class.forName("org.sqlite.JDBC");
@@ -28,7 +28,6 @@ public class Main {
         }
 
     }
-
     private static void closeDatabase(){
         try {
             db.close();
