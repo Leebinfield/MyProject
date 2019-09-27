@@ -1,6 +1,9 @@
+package Controllers;
+
+import Server.Main;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 
 public class Restaurants {

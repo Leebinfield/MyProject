@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="finally pushed back lol added classes and some code">
+    <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="added more classes and improved on crud a little input more dependancies">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Thing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/yourDatabaseNameHere.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Accounts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Restaurants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Restaurants.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,10 +135,6 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ProjectDB [16]" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="ProjectDB [2]" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
@@ -163,16 +165,29 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ProjectDB [9]" type="feb32156:DbDataSourceImpl" />
+        <item name="ProjectDB [8]" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ProjectDB [9]" type="feb32156:DbDataSourceImpl" />
+        <item name="ProjectDB [8]" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ProjectDB [9]" type="feb32156:DbDataSourceImpl" />
+        <item name="ProjectDB [8]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ProjectDB [8]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="menu: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ProjectDB [8]" type="feb32156:DbDataSourceImpl" />
         <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
@@ -210,12 +225,13 @@
   <component name="ProjectId" id="1QmXzNmz8wJQPyV9nndH9mRuMpw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/Database.db" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -239,7 +255,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="12" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="Server.Main" />
       <module name="MyProject" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -292,7 +308,9 @@
       <workItem from="1561985781131" duration="1845000" />
       <workItem from="1562149196129" duration="2780000" />
       <workItem from="1568377037308" duration="3791000" />
-      <workItem from="1568981038845" duration="3462000" />
+      <workItem from="1568981038845" duration="3940000" />
+      <workItem from="1569316426861" duration="978000" />
+      <workItem from="1569585830878" duration="4924000" />
     </task>
     <task id="LOCAL-00001" summary="Added update add select and delete">
       <created>1560504636725</created>
@@ -343,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568380340525</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added more classes and improved on crud a little input more dependancies">
+      <created>1568985714270</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568985714270</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,17 +392,7 @@
     <MESSAGE value="updated db stuff" />
     <MESSAGE value="Did some methods" />
     <MESSAGE value="finally pushed back lol added classes and some code" />
-    <option name="LAST_COMMIT_MESSAGE" value="finally pushed back lol added classes and some code" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="added more classes and improved on crud a little input more dependancies" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more classes and improved on crud a little input more dependancies" />
   </component>
 </project>
