@@ -1,26 +1,41 @@
 package Controllers;
 
 import Server.Main;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-
+@Path("Restaurant/")
 public class Restaurants {
-    public static void listRestaurants(){
+    @GET
+    @Path("listRest")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String listRestaurants(){
+        System.out.println("restaurants/listRest");
+        JSONArray listRest = new JSONArray();
         try{
-            PreparedStatement ps  = Main.db.prepareStatement("SELECT RestID,price,postcode,Name FROM main.Restaurant");
+            PreparedStatement ps  = Main.db.prepareStatement("SELECT RestID,price,postcode,RName  FROM Restaurant");
             ResultSet results = ps.executeQuery();
             while(results.next()){
-                int id = results.getInt(1);
-                String priceRate = results.getString(2);
-                String postcodee = results.getString(3);
-                String Rname = results.getString(4);
-                System.out.println("ID:" + id +", Price:" + priceRate + ", Postcode:"+postcodee);
+                JSONObject item = new JSONObject();
+                System.out.println(results.getString(4));
+                item.put("RestaurantID",results.getInt(1));
+                item.put("Price",results.getInt(2));
+                item.put("Postcode",results.getInt(3));
+                item.put("Restaurant Name",results.getString(4));
+                listRest.add(item);
             }
+            return listRest.toString();
         }
         catch (Exception exception){
             System.out.println("DB error"+exception.getMessage());
+            return "{\"error\":\"Unable to list items, please see sever console for more info.\"}";
         }
 
 

@@ -13,19 +13,6 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="Database.db" uuid="c31d6fea-79e0-49e6-b12c-98a1c8328aab">
-      <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema" qname="main" />
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
     <data-source name="ProjectDB" uuid="13a70b06-5ffb-4c0a-b53f-69f3d695cb25">
       <database-info product="SQLite" version="3.25.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.25.1" dbms="SQLITE" exact-version="3.25.1">
         <identifier-quote-string>&quot;</identifier-quote-string>
@@ -108,6 +95,7 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <user-name>87436</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" qname="main" />
@@ -119,6 +107,7 @@
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <user-name>87436</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" qname="main" />

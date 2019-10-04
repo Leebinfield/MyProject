@@ -10,6 +10,8 @@ import java.util.Scanner;
 import org.eclipse.jetty.servlet.*;
 import org.glassfish.jersey.servlet.*;
 
+import javax.ws.rs.GET;
+
 
 public class Main {
     public static Connection db = null;
@@ -35,7 +37,7 @@ public class Main {
         }
 
 
-        Controllers.Restaurants.listRestaurants();
+
         Controllers.Restaurants.insertRest(2, "gu183ry" , 123);
         Add();     //CREATE
         Select();  //READ
@@ -93,7 +95,7 @@ public class Main {
     private static void Delete(){
         try{
             Scanner scanner = new Scanner(System.in);
-            System.out.println("What account name do you want to delte?:-");
+            System.out.println("What account name do you want to delete?:-");
             String x = scanner.nextLine();
             PreparedStatement ps = db.prepareStatement("DELETE FROM AccountName WHERE main.AccountName.FavFood= ?");
             ps.setString(1, x);

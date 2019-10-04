@@ -12,15 +12,6 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="Database.db" uuid="c31d6fea-79e0-49e6-b12c-98a1c8328aab">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/resources/Database.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
     <data-source source="LOCAL" name="ProjectDB" uuid="13a70b06-5ffb-4c0a-b53f-69f3d695cb25">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
