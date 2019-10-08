@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class Restaurants {
     public static void listRestaurants(){
         try{
-            PreparedStatement ps  = Main.db.prepareStatement("SELECT RestID,price,postcode,Name FROM main.Restaurant");
+            PreparedStatement ps  = Main.db.prepareStatement("SELECT RestID,price,postcode,Rname FROM main.Restaurant");
             ResultSet results = ps.executeQuery();
             while(results.next()){
                 int id = results.getInt(1);
