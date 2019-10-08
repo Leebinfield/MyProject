@@ -5,6 +5,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -20,7 +21,7 @@ public class Restaurants {
         System.out.println("restaurants/listRest");
         JSONArray listRest = new JSONArray();
         try{
-            PreparedStatement ps  = Main.db.prepareStatement("SELECT RestID,price,postcode,RName  FROM Restaurant");
+            PreparedStatement ps  = Main.db.prepareStatement("SELECT RestID,price,postcode, Rname  FROM Restaurant");
             ResultSet results = ps.executeQuery();
             while(results.next()){
                 JSONObject item = new JSONObject();
@@ -50,6 +51,14 @@ public class Restaurants {
             }catch (Exception exception){
                 System.out.println("DB error:" + exception.getMessage() );
             }
+        }
+
+        @POST
+        @Path("add")
+        @Produces(MediaType.APPLICATION_JSON)
+        public String addRestaurant(){
+
+            return "";
         }
     }
 
