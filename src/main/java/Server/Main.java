@@ -6,11 +6,9 @@ import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.sqlite.SQLiteConfig;
 import java.sql.*;
-import java.util.Scanner;
 import org.eclipse.jetty.servlet.*;
 import org.glassfish.jersey.servlet.*;
 
-import javax.ws.rs.GET;
 
 
 public class Main {
@@ -35,14 +33,6 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-        // Add();     //CREATE
-        // Select();  //READ
-        // Update();  //UPDATE
-        // Delete();  //DESTROY
-        closeDatabase();
-
     }
 
     private static void openDatabase(String dbFile) {
