@@ -13,7 +13,7 @@ public class Accounts {
     //public static Connection db = null;
 
     @POST
-    @Path("add")
+    @Path("Add")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String AddAccount(

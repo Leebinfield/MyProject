@@ -34,7 +34,6 @@ public class Restaurants {
             return "{\"error\":\"Unable to list items, please see sever console for more info.\"}";
         }
 
-
     }
 
     public static void insertRest(int Price, String Postcode, int ID) {
