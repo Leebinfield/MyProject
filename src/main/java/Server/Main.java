@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         openDatabase("ProjectDB.db");
         //Select();
-        Add();
+        //Add();
         //Delete();
        // Update();
         ResourceConfig config = new ResourceConfig();
@@ -38,7 +38,6 @@ public class Main {
         }
 
     }
-
 
     private static void openDatabase(String dbFile) { //This is the name of the method for recalling purposes
         try { //The try-catch allows my project to diagnose problems which occur during runtime and display an error message

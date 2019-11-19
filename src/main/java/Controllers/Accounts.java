@@ -56,5 +56,30 @@ public class Accounts {
             return "{\"error\":\"Unable to delete item, please see server\"}";
         }
     }
+    @POST
+    @Path("Update")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String upAccount(
+            @FormDataParam("Accid") Integer Accid, @FormDataParam("fname") String Firstname, @FormDataParam("lname") String Lastname,@FormDataParam("AccEmail") String email
+            ,@FormDataParam("accpost") String posty) {
+        try {
+            if (Accid == null ) {
+                throw new Exception("One or more form data parameters are missing in http request.");
+            }
+            System.out.println("Account id to update:" + Accid);
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE Accounts SET Firstname=?,Lastname=?,Email=?,postcode=? WHERE ID = ?");
+            ps.setInt(5, Accid);
+            ps.setString(1, Firstname);
+            ps.setString(2, Lastname);
+            ps.setString(3, email);
+            ps.setString(4, posty);
+            ps.execute();
+            return "{\"status\": \"OK\"}";
+        } catch (Exception exception) {
+            System.out.println("Database error: " + exception.getMessage());
+            return "{\"error\": \"Unable to update item, see server for more\"}";
+        }
+    }
 }
 

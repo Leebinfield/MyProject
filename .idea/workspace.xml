@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="Added methods into restaurant class /">
+    <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="did stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/ProjectDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ProjectDB.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Accounts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Restaurants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Restaurants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Accounts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Accounts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Restaurants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Restaurants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MyProject.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ProjectDB.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Area.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Area.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Main.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,13 +52,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
         <item name="Accounts: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="ProjectDB" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="Restaurant: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -216,7 +208,9 @@
       <workItem from="1573125267458" duration="111000" />
       <workItem from="1573219547257" duration="3806000" />
       <workItem from="1573484344861" duration="2598000" />
-      <workItem from="1573550124369" duration="4032000" />
+      <workItem from="1573550124369" duration="4120000" />
+      <workItem from="1573822933289" duration="4989000" />
+      <workItem from="1574154565380" duration="4402000" />
     </task>
     <task id="LOCAL-00001" summary="Added update add select and delete">
       <created>1560504636725</created>
@@ -295,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573125298868</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="did stuff">
+      <created>1573554614682</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573554614682</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +321,7 @@
     <MESSAGE value="Did some methods" />
     <MESSAGE value="Added methods into restaurant class" />
     <MESSAGE value="Added methods into restaurant class /" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added methods into restaurant class /" />
+    <MESSAGE value="did stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="did stuff" />
   </component>
 </project>

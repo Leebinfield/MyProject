@@ -31,7 +31,7 @@ public class Restaurants {
             return listRest.toString();
         } catch (Exception exception) {
             System.out.println("DB error" + exception.getMessage());
-            return "{\"error\":\"Unable to list items, please see sever console for more info.\"}";
+            return "{\"error\":\"Unable to list items, please see server console for more info.\"}";
         }
 
     }
@@ -67,11 +67,33 @@ public class Restaurants {
             ps.execute();
             return "{\"status\":\"OK\"}";
         } catch (Exception exception) {
-            System.out.println("Database error: " + exception.getMessage());
-            return "{\"error\": \"Unable to create new item, see server for more\"}";
+        System.out.println("Database error: " + exception.getMessage());
+        return "{\"error\": \"Unable to create new item, see server for more\"}";
+        }
+        }
+
+    @POST
+    @Path("Delete")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String deleteRestaurant(@FormDataParam("restID") Integer restID) {
+        try {
+            if (restID == null) {
+                throw new Exception("One or more data para not done");
+            }
+            System.out.println("Restaurant ID=" + restID);
+            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM Restaurant WHERE RestIDID =?");
+            ps.setInt(1, restID);
+            ps.execute();
+            return "{\"status\":\"OK\"}";
+
+
+        } catch (Exception exception) {
+            System.out.println("DB error:" + exception.getMessage());
+            return "{\"error\":\"Unable to delete item, please see server\"}";
         }
     }
-}
+        }
 
 
 
