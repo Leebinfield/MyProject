@@ -17,16 +17,19 @@ public class Accounts {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String AddAccount(
-            @FormDataParam("Accid") Integer Accid, @FormDataParam("firstname") String firstname, @FormDataParam("lastname") String lastname) {
+            @FormDataParam("aid") Integer aid, @FormDataParam("firstname") String firstname, @FormDataParam("lastname") String lastname, @FormDataParam("email") String email, @FormDataParam("postcode")String postcode, @FormDataParam("aoth")Integer aoth) {
         try {
-            if (Accid == null || firstname == null || lastname == null) {
+            if (aid == null || firstname == null || lastname == null || email == null || postcode == null || aoth==null) {
                 throw new Exception("One or more form data parameters are missing in http request.");
             }
-            System.out.println("thing/new id=" + Accid);
-            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Accounts (id,firstname,lastname) VALUES (?,?,?)");
-            ps.setInt(1, Accid);
+            System.out.println("thing/new id=" + aid);
+            PreparedStatement ps = Main.db.prepareStatement("INSERT INTO Accounts (id,firstname,lastname,Email,postcode,AOTH) VALUES (?,?,?,?,?,?)");
+            ps.setInt(1, aid);
             ps.setString(2, firstname);
             ps.setString(3, lastname);
+            ps.setString(4, email);
+            ps.setString(5, postcode);
+            ps.setInt(6, aoth);
             ps.execute();
             return "{\"status\": \"OK\"}";
         } catch (Exception exception) {
