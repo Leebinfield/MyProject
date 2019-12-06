@@ -8,6 +8,8 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Scanner;
+
 @Path("Restaurant/")
 public class Restaurants {
     @GET
@@ -53,7 +55,7 @@ public class Restaurants {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String addRestaurant(
-            @FormDataParam("id") Integer id, @FormDataParam("name") String Name, @FormDataParam("postcode") String postcode,@FormDataParam("price") Integer price) {
+            @FormDataParam("id") Integer id, @FormDataParam("name") String Name, @FormDataParam("postcode") String postcode, @FormDataParam("price") Integer price) {
         try {
             if (id == null || Name == null || postcode == null || price == null) {
                 throw new Exception("One or more fields empty in HTTP request");
@@ -65,12 +67,43 @@ public class Restaurants {
             ps.setString(3, postcode);
             ps.setInt(4, price);
             ps.execute();
-            return "{\"status\":\"OK\"}";
+            return "{\"status\":\"Item added\"}";
+
         } catch (Exception exception) {
-        System.out.println("Database error: " + exception.getMessage());
-        return "{\"error\": \"Unable to create new item, see server for more\"}";
+            System.out.println("Database error: " + exception.getMessage());
+            return "{\"error\": \"Unable to create new item, see server for more\"}";
         }
+    }
+    @POST
+    @Path("Update")
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String updateRestaurant(
+            @FormDataParam("id") Integer id){
+        try{
+            if (id==null){
+                throw new Exception("Parameters missing.");
+            }
+            Scanner scanner = new Scanner(System.in); //Scanner is an instance which reads the input of the users.
+            System.out.println("thing/update id=" + id);
+            System.out.println("Enter name of restaurant: ");
+            String name = scanner.nextLine();
+            System.out.println("Enter name of restaurant: ");
+            String postcode = scanner.nextLine();
+            System.out.println("Enter name of restaurant: ");
+            String price = scanner.nextLine();
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE Restaurant SET Rname = ?, postcode =?, price =? ");
+            ps.setString(1,name);
+            ps.setString(2,postcode);
+            ps.setString(3,price);
+            ps.execute();
+            return "{\"status\":\"Item updated\"}";
+            
+        }catch(Exception exception){
+            System.out.println("Database error: " + exception.getMessage());
+            return "{\"error\": \"Unable to create new item, see server for more\"}";
         }
+    }
 
     @POST
     @Path("Delete")
@@ -90,10 +123,14 @@ public class Restaurants {
 
         } catch (Exception exception) {
             System.out.println("DB error:" + exception.getMessage());
-            return "{\"error\":\"Unable to delete item, please see server\"}";
+            return "{\"error\": \"Unable to create new item, see server for more\"}";
         }
     }
-        }
+}
+
+
+
+
 
 
 
