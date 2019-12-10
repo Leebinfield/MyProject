@@ -4,6 +4,8 @@ import Server.Main;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+
+import javax.validation.constraints.FutureOrPresent;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
@@ -79,26 +81,21 @@ public class Restaurants {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String updateRestaurant(
-            @FormDataParam("id") Integer id){
+            @FormDataParam("id") Integer id, @FormDataParam("rname") String rname, @FormDataParam("Posty") String Posty, @FormDataParam("pricing") Integer pricing){
         try{
             if (id==null){
                 throw new Exception("Parameters missing.");
             }
             Scanner scanner = new Scanner(System.in); //Scanner is an instance which reads the input of the users.
             System.out.println("thing/update id=" + id);
-            System.out.println("Enter name of restaurant: ");
-            String name = scanner.nextLine();
-            System.out.println("Enter name of restaurant: ");
-            String postcode = scanner.nextLine();
-            System.out.println("Enter name of restaurant: ");
-            String price = scanner.nextLine();
-            PreparedStatement ps = Main.db.prepareStatement("UPDATE Restaurant SET Rname = ?, postcode =?, price =? ");
-            ps.setString(1,name);
-            ps.setString(2,postcode);
-            ps.setString(3,price);
+            PreparedStatement ps = Main.db.prepareStatement("UPDATE Restaurant SET Rname = ?, postcode =?, price =? WHERE RestID = ?");
+            ps.setString(1,rname);
+            ps.setString(2,Posty);
+            ps.setInt(3,pricing);
+            ps.setInt(4, id);
             ps.execute();
             return "{\"status\":\"Item updated\"}";
-            
+
         }catch(Exception exception){
             System.out.println("Database error: " + exception.getMessage());
             return "{\"error\": \"Unable to create new item, see server for more\"}";

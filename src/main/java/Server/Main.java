@@ -28,7 +28,7 @@ public class Main {
         Server server = new Server(8081);
         ServletContextHandler context = new ServletContextHandler(server, "/");
         context.addServlet(servlet, "/*");
-        closeDatabase();
+        //closeDatabase();
         try {
             server.start();
             System.out.println("Server successfully started.");
