@@ -64,19 +64,22 @@ public class Accounts {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     @Produces(MediaType.APPLICATION_JSON)
     public String upAccount(
-            @FormDataParam("Accid") Integer Accid, @FormDataParam("fname") String Firstname, @FormDataParam("lname") String Lastname,@FormDataParam("AccEmail") String email
-            ,@FormDataParam("accpost") String posty) {
+            @FormDataParam("ID") Integer id,
+            @FormDataParam("Firstname") String firstname,
+            @FormDataParam("Lastname") String lastname,
+            @FormDataParam("Email") String email,
+            @FormDataParam("postcode") String postcode) {
         try {
-            if (Accid == null ) {
+            if (id == null ) {
                 throw new Exception("One or more form data parameters are missing in http request.");
             }
-            System.out.println("Account id to update:" + Accid);
+            System.out.println("Account id to update:" + id);
             PreparedStatement ps = Main.db.prepareStatement("UPDATE Accounts SET Firstname=?,Lastname=?,Email=?,postcode=? WHERE ID = ?");
-            ps.setInt(5, Accid);
-            ps.setString(1, Firstname);
-            ps.setString(2, Lastname);
+            ps.setString(1, firstname);
+            ps.setString(2, lastname);
             ps.setString(3, email);
-            ps.setString(4, posty);
+            ps.setString(4, postcode);
+            ps.setInt(5, id);
             ps.execute();
             return "{\"status\": \"OK\"}";
         } catch (Exception exception) {

@@ -112,7 +112,7 @@ public class Restaurants {
                 throw new Exception("One or more data para not done");
             }
             System.out.println("Restaurant ID=" + restID);
-            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM Restaurant WHERE RestIDID =?");
+            PreparedStatement ps = Main.db.prepareStatement("DELETE FROM Restaurant WHERE RestID =?");
             ps.setInt(1, restID);
             ps.execute();
             return "{\"status\":\"OK\"}";
