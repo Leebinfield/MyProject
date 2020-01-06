@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="&#10;dun that bait">
+    <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="Last commit till xmas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/css/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Accounts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/Accounts.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +122,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fruitdemo-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -129,7 +132,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -237,7 +240,8 @@
       <workItem from="1575969469634" duration="3147000" />
       <workItem from="1576151082363" duration="633000" />
       <workItem from="1576242156352" duration="4217000" />
-      <workItem from="1576574355252" duration="1887000" />
+      <workItem from="1576574355252" duration="1934000" />
+      <workItem from="1578323052834" duration="3150000" />
     </task>
     <task id="LOCAL-00001" summary="Added update add select and delete">
       <created>1560504636725</created>
@@ -365,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576247491347</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Last commit till xmas">
+      <created>1576578486867</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1576578486867</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +404,7 @@
     <MESSAGE value="did stuff" />
     <MESSAGE value="did api stuff" />
     <MESSAGE value="&#10;dun that bait" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;dun that bait" />
+    <MESSAGE value="Last commit till xmas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last commit till xmas" />
   </component>
 </project>
