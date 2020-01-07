@@ -4,7 +4,7 @@
 <head>
     <title>Reserver</title>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-    <script src="js/index.js"></script>
+    <script src="/client/js/index.js"></script>
 </head>
 
 <body onload="pageLoad()">
@@ -16,32 +16,24 @@
         <h1>Lees Restaurant Reserver</h1>
     </div>
 
-    <div id="listDiv"></div>
+    <div id="ListRest">
+        <form id="listing">
+            <div class="frontPage">
 
-    <div id="editDiv">
+                    <div>
+                        <button class="fpButton">Book now!</button>  Restaurant 1 <img class=newimg src="mac.png" alt="pic" style="width:100px;height:100px;float: right">
+                    </div>
+                    <div>
+                    <button class="fpButton">Book now!</button>  Restaurant 2 <img class=newimg src="nandos-logo.png" alt="pic" style="width:100px;height:100px;float:right">
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div id="home">
         <h2 id="editHeading"></h2>
-        <form id="fruitForm">
-            <input type="hidden" name="id" id="fruitId">
-            <div>
-                <label for="fruitName" class="label">Name:</label>
-                <input type="text" name="name" id="fruitName">
-            </div>
-            <div>
-                <label for="fruitImage" class="label">Image:</label>
-                <input type="text" name="image" id="fruitImage">
-            </div>
-            <div>
-                <label for="fruitColour" class="label">Colour:</label>
-                <input type="text" name="colour" id="fruitColour">
-            </div>
-            <div>
-                <label for="fruitSize" class="label">Size:</label>
-                <input type="text" name="size" id="fruitSize">
-            </div>
-            <div>
-                <input type="submit" value="Save" id="saveButton">
-                <input type="submit" value="Cancel" id="cancelButton">
-            </div>
+        <form id="LoginForm">
+            <input type="hidden" name="id" id="">
         </form>
     </div>
 
