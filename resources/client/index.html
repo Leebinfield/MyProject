@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="HTML">
+<html lang="HTML" xmlns:style="http://www.w3.org/1999/xhtml">
 
 <head>
     <title>Reserver</title>
@@ -9,35 +9,34 @@
 
 <body onload="pageLoad()">
 
-<div id="content">
+<div class="content">
 
-    <div id="pageHeader">
-        <div class="floatRight"><button id="newButton" class="editButton">Sign in</button></div>
+    <div class="pageHeader">
+        <div class="floatRight">
+            <form action="login.html">
+            <button id="newButton" class="editButton">Sign in</button>
+            </form>
+        </div>
         <h1>Lees Restaurant Reserver</h1>
     </div>
 
     <div id="ListRest">
-        <form id="listing">
-            <div class="frontPage">
 
-                    <div>
-                        <button class="fpButton">Book now!</button>  Restaurant 1 <img class=newimg src="mac.png" alt="pic" style="width:100px;height:100px;float: right">
-                    </div>
-                    <div>
-                    <button class="fpButton">Book now!</button>  Restaurant 2 <img class=newimg src="nandos-logo.png" alt="pic" style="width:100px;height:100px;float:right">
-                </div>
+                Rest1<p></p>
+               <img class=newimg src="mac.png" alt="pic" style="width:100px;height:100px;alignment: center"> <button class="fpButton">Book now!</button>
 
-            </div>
-        </form>
+
     </div>
-    <div id="home">
+
+    </div>
+    <div class="home">
         <h2 id="editHeading"></h2>
         <form id="LoginForm">
             <input type="hidden" name="id" id="">
         </form>
     </div>
 
-</div>
+
 
 </body>
 

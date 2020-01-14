@@ -1,0 +1,23 @@
+body {
+    background-color: dimgrey;
+    margin: 0;
+    font-family: 'Arial', serif;
+}
+#content {
+    background-color: white;
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 600px;
+    padding: 32px;
+    font-size: 19px;
+    font-stretch: expanded;
+}
+#nw{
+    font-family: "Bell MT";
+    font-size: 15px;
+    padding: 2px;
+
+}
+#color{
+    text-decoration-color: gray;
+}

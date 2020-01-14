@@ -15,27 +15,13 @@ h1 {
     min-height: 600px;
     padding: 32px;
 }
+#ListRest{
 
-tr {
-    text-align: center;
+    font-size:25px;
 }
-
-td {
-    text-align: left;
+#Details{
+    font-size:15px;
 }
-
-th {
-    text-align: left;
-}
-
-td.last {
-    text-align: right;
-}
-
-th.last {
-    text-align: right;
-}
-
 
 #pageHeader {
     margin-bottom: 20px;
@@ -110,12 +96,10 @@ table {
     width: 100%;
 }
 
-.fruitColour {
-    border-radius: 8px;
-    padding-left: 64px;
-}
+
+
 .frontPage {
-    font-size: 20pt;
+    font-size: 50pt;
     margin-top: auto;
     margin-left: auto;
     background-color: aquamarine;
