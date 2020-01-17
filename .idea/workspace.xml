@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="after xmas">
-      <change afterPath="$PROJECT_DIR$/resources/client/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/client/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/client/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/client/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/css/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -249,7 +243,8 @@
       <workItem from="1576574355252" duration="1934000" />
       <workItem from="1578323052834" duration="3257000" />
       <workItem from="1578387658179" duration="5422000" />
-      <workItem from="1578993026914" duration="4477000" />
+      <workItem from="1578993026914" duration="4706000" />
+      <workItem from="1579266777217" duration="3649000" />
     </task>
     <task id="LOCAL-00001" summary="Added update add select and delete">
       <created>1560504636725</created>
@@ -398,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578393102540</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="after xmas">
+      <created>1578997768880</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1578997768880</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
