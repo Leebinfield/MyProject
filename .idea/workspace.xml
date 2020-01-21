@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2e3a9e60-66a4-462c-a96b-e5c1aeadf52a" name="Default" comment="after xmas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/css/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/client/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/client/js/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -244,7 +246,8 @@
       <workItem from="1578323052834" duration="3257000" />
       <workItem from="1578387658179" duration="5422000" />
       <workItem from="1578993026914" duration="4706000" />
-      <workItem from="1579266777217" duration="3649000" />
+      <workItem from="1579266777217" duration="3738000" />
+      <workItem from="1579598355840" duration="4049000" />
     </task>
     <task id="LOCAL-00001" summary="Added update add select and delete">
       <created>1560504636725</created>
@@ -400,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578997768880</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="after xmas">
+      <created>1579271449213</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1579271449213</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
